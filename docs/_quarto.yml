@@ -4,4 +4,4 @@ format:
 project: {type: book}
 book:
   title: Data Science in Clojure
-  chapters: [index.qmd, notebooks.index.qmd]
+  chapters: [index.qmd]
