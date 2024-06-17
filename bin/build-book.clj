@@ -11,10 +11,10 @@
    {:show             false
     :run-quarto       false
     :format           [:quarto :html]
-    :book             {:title "Cashcloj | Data Science in Clojure"}
+    :book             {:title "Data Science in Clojure"}
     :base-source-path "src"
     :base-target-path "docs"
     :subdirs-to-sync  ["src"]
-    :source-path      ["notebooks/intro.clj"]}))
+    :source-path      ["notebooks/index.clj"]}))
 
 (build)

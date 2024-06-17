@@ -1,4 +1,4 @@
-(ns notebooks.intro
+(ns notebooks.index
   (:require [tablecloth.api :as tc]
             [scicloj.noj.v1.vis.hanami :as hanami]
             [aerial.hanami.templates :as ht]
