@@ -1,0 +1,22 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Cashcloj | Data Science in Clojure",
+    "section": "",
+    "text": "1 Cashcloj | Data Science in Clojure",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Cashcloj | Data Science in Clojure</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks.intro.html",
+    "href": "notebooks.intro.html",
+    "title": "2  Clojure for data science",
+    "section": "",
+    "text": "(ns notebooks.intro\n  (:require [tablecloth.api :as tc]\n            [scicloj.noj.v1.vis.hanami :as hanami]\n            [aerial.hanami.templates :as ht]\n            [scicloj.kindly.v4.kind :as kind]))\n\nWelcome reader, my name is Mario Gintili and this space is my attempt at self-documenting my learning journey. My goal is to become a productive data scientist & machine learning engineer. I have a background in software engineering with;; Ruby/Rails & Node.js.\nI was really impressed by the scicloj tech stack. It’s the toolset I’ll be using for this exploration\nWithout further ado, here’s the syllabus that was kindly given to me by a colleague and fellow member of the community\n\nIntroduction to Data Science & Clojure\n(Done) Intro to Clojure syntax, data structures, functions\n(Done) Setting up Clojure development environment\nMath & Stats Fundamental\nTODO - what goes here?\nProbability theory, distributions, hypothesis testing\nLinear algebra basics (vectors, matrices, operations)\nDescriptive statistics, exploratory data analysis\nExercises: Probability problems, basic data analysis\nData Manipulation with Clojure\nClojure sequences, collections, and data operations\n(Done) Intro to Clojure libs (tablecloth, hanami, fastmath, tech.ml.dataset)\nData cleaning, merging, reshaping datasets\nProject: Clean and wrangle a dataset\nData Visualization\nPrinciples of data visualization (Tufte, Wilkinson)\nUsing oz, Vega/Vega-Lite libs for plots in Clojure\nUsing plotly\nCreating common plots: Scatter, line, bar, histograms\nProject: Explore and visualize a dataset\nStatistical Models & Regression\nSimple/multiple linear regression\nModel fitting, evaluation metrics\nCase study: Predicting housing prices\nClassification\nLogistic regression, evaluation metrics\nDecision trees, random forests\nCase study: Spam classification\nFeature Engineering, Clustering & Dimensionality Reduction\nK-means clustering\nPrincipal Component Analysis (PCA)\nCase study: Customer segmentation\nDatabases & Big Data\nIntro to databases (SQL, NoSQL, graph)\nBig data concepts (MapReduce, Spark, Hadoop)\nProject: Analyze data from a database\nNatural Language Processing\nText data preprocessing\nTopic modeling, sentiment analysis\nProject: Analyze text data (reviews, tweets, stock market commentary, etc)\nTime Series & Forecasting\nTrend, seasonality, autocorrelation\nARIMA, exponential smoothing models\nCase study: Forecast product demand\nRecommendation Systems\nCollaborative filtering\nMatrix factorization techniques\nProject: Build a recommendation engine\nDeep Learning\nPytorch\nTensorflow\nMLOps\nMLFlow\nModern practises, storing and managing models, AWS sagemaker\nStable diffusion\nApplications & Final Project\nPutting it all together: End-to-end case studies\nIndividual final project on data science problem, maybe stock market\n\n\nsource: src/notebooks/intro.clj",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Clojure for data science</span>"
+    ]
+  }
+]
