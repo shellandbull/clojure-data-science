@@ -6,25 +6,25 @@
 
 ;; # Clojure for data science
 
-;; Welcome reader, my name is Mario Gintili and this space is my attempt at self-documenting my learning journey.
-;; My goal is to become a productive data scientist & machine learning engineer. I have a background in software engineering with;; Ruby/Rails & Node.js.
+;; Welcome! My name is Mario Gintili and this Quarto book is a self-documenting learning journey in the chasm of data science and machine learning.
 
-;; I was really impressed by the [scicloj](https://scicloj.github.io/) tech stack. It's the toolset I'll be using for this exploration
+;; I have a background in software engineering with Ruby/Rails & Node.js.
+
+;; I was really impressed by the [scicloj](https://scicloj.github.io/) tech stack. It's the toolset I'll be using for this exploration.
 
 ;; Without further ado, here's the syllabus that was kindly given to me by a colleague and fellow member of the community
 
 ;; - Introduction to Data Science & Clojure
-;; - (Done) Intro to Clojure syntax, data structures, functions
-;; - (Done) Setting up Clojure development environment
+;; - Intro to Clojure syntax, data structures, functions
+;; - Setting up Clojure development environment
 ;; - Math & Stats Fundamental
-;; - TODO - what goes here?
 ;; - Probability theory, distributions, hypothesis testing
-;; -  Linear algebra basics (vectors, matrices, operations)
-;; -  Descriptive statistics, exploratory data analysis
-;; -  Exercises: Probability problems, basic data analysis
-;; -  Data Manipulation with Clojure
-;; -  Clojure sequences, collections, and data operations
-;; - (Done) Intro to Clojure libs (tablecloth, hanami, fastmath, tech.ml.dataset)
+;; - Linear algebra basics (vectors, matrices, operations)
+;; - Descriptive statistics, exploratory data analysis
+;; - Exercises: Probability problems, basic data analysis
+;; - Data Manipulation with Clojure
+;; - Clojure sequences, collections, and data operations
+;; - Intro to Clojure libs (tablecloth, hanami, fastmath, tech.ml.dataset)
 ;; - Data cleaning, merging, reshaping datasets
 ;; - Project: Clean and wrangle a dataset
 ;; - Data Visualization
