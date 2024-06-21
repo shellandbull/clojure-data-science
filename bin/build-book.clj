@@ -16,6 +16,7 @@
     :base-target-path "docs"
     :subdirs-to-sync  ["src"]
     :source-path      ["index.clj"
-                       "notebooks/intro.clj"]}))
+                       "notebooks/intro.clj"
+                       "notebooks/clojure.clj"]}))
 
 (build)

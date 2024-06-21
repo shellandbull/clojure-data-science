@@ -1,0 +1,144 @@
+
+---
+format:
+  html: {toc: true, toc-depth: 4, theme: cosmo, output-file: notebooks.clojure.html}
+fontsize: 0.9em
+code-block-background: true
+include-in-header: {text: '<link rel = "icon" href = "data:," />'}
+
+---
+<style></style><style>.printedClojure .sourceCode {
+  background-color: transparent;
+  border-style: none;
+}
+</style><style>.clay-limit-image-width .clay-image {max-width: 100%}
+</style>
+<script src="notebooks.clojure_files/md-default0.js" type="text/javascript"></script><script src="notebooks.clojure_files/md-default1.js" type="text/javascript"></script>
+
+::: {.sourceClojure}
+```clojure
+(ns notebooks.clojure
+  (:require [tablecloth.api :as tc]
+            [scicloj.noj.v1.vis.hanami :as hanami]
+            [aerial.hanami.templates :as ht]
+            [scicloj.kindly.v4.kind :as kind]))
+```
+:::
+
+
+
+# Clojure
+
+> Clojure is a dynamic, general-purpose programming language, combining the approachability and interactive development of a scripting language with an efficient and robust infrastructure for multithreaded programming.
+
+[source](https://clojure.org/)
+
+
+## Literals
+
+
+## Characters
+
+
+## Symbols
+
+
+## Collections
+
+
+## Structure
+
+
+## Delayed evaluation
+
+
+## REPL, explorations & interactive programming
+
+
+## Functions
+
+
+### Multi arity functions
+
+
+### Rest/split functions
+
+
+### `defn` vs `fn`
+
+
+## Applying functions
+
+
+### `apply`
+
+
+## Locals & closures
+
+
+### `let`
+
+
+### `defn`
+
+
+### Closures
+
+
+## Java Interoperability
+
+
+## Sequential collections
+
+
+### Vectors
+
+
+### Lists
+
+
+## Hashed collections
+
+
+### Sets
+
+
+### Maps
+
+
+### Representing domain data
+
+
+## Flow control
+
+
+### Statements vs expressions
+
+
+### Flow control expressions
+
+
+## Recursion
+
+
+## Exceptions
+
+
+## Namespaces
+
+
+### Declaring namespaces
+
+
+### Java classes and imports
+
+
+```{=html}
+<div style="background-color:grey;height:2px;width:100%;"></div>
+```
+
+
+
+```{=html}
+<div><pre><small><small>source: src/notebooks/clojure.clj</small></small></pre></div>
+```
