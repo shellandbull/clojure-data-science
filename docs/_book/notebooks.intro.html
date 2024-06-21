@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Science in Clojure</title>
+<title>Data Science in Clojure - 2&nbsp; Introduction</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./notebooks.intro.html" rel="next">
+<link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -115,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Clojure for data science</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./notebooks.intro.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -142,13 +142,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Clojure for data science</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks.intro.html" class="sidebar-item-text sidebar-link">
+  <a href="./notebooks.intro.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
@@ -162,7 +162,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#clojure-for-data-science" id="toc-clojure-for-data-science" class="nav-link active" data-scroll-target="#clojure-for-data-science"><span class="header-section-number">1</span> Clojure for data science</a></li>
+  <li><a href="#why-clojure" id="toc-why-clojure" class="nav-link active" data-scroll-target="#why-clojure"><span class="header-section-number">2.1</span> Why Clojure?</a></li>
+  <li><a href="#why-data-science" id="toc-why-data-science" class="nav-link" data-scroll-target="#why-data-science"><span class="header-section-number">2.2</span> Why data science?</a></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology"><span class="header-section-number">2.3</span> Methodology</a></li>
+  <li><a href="#demo" id="toc-demo" class="nav-link" data-scroll-target="#demo"><span class="header-section-number">2.4</span> Demo</a></li>
   </ul>
 </nav>
     </div>
@@ -171,7 +174,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data Science in Clojure</h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
 </div>
 
 
@@ -196,82 +199,258 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 <style>.clay-limit-image-width .clay-image {max-width: 100%}
 </style>
-<script src="index_files/md-default0.js" type="text/javascript"></script>
-<script src="index_files/md-default1.js" type="text/javascript"></script>
+<script src="notebooks.intro_files/md-default0.js" type="text/javascript"></script>
+<script src="notebooks.intro_files/md-default1.js" type="text/javascript"></script>
+<script src="notebooks.intro_files/plotly2.js" type="text/javascript"></script>
 <div class="sourceClojure">
-<div class="sourceCode" id="cb1"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>(<span class="kw">ns</span> <span class="kw">index</span></span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>(<span class="kw">ns</span> notebooks.intro</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  (<span class="at">:require</span> [tablecloth.api <span class="at">:as</span> tc]</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>            [scicloj.noj.v1.vis.hanami <span class="at">:as</span> hanami]</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>            [aerial.hanami.templates <span class="at">:as</span> ht]</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>            [scicloj.kindly.v4.kind <span class="at">:as</span> kind]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>            [scicloj.metamorph.ml.toydata <span class="at">:as</span> data]</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>            [scicloj.kindly.v4.kind <span class="at">:as</span> kind]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="clojure-for-data-science" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Clojure for data science</h1>
-<p>Welcome! My name is Mario Gintili and this Quarto book is a self-documenting learning journey in the chasm of data science and machine learning.</p>
-<p>I have a background in software engineering with Ruby/Rails &amp; Node.js.</p>
-<p>I was really impressed by the <a href="https://scicloj.github.io/">scicloj</a> tech stack. It’s the toolset I’ll be using for this exploration.</p>
-<p>Without further ado, here’s the syllabus that was kindly given to me by a colleague and fellow member of the community</p>
+<blockquote class="blockquote">
+<p>Data science is an interdisciplinary academic field[1] that uses statistics, scientific computing, scientific methods, processes, scientific visualization, algorithms and systems to extract or extrapolate knowledge and insights from potentially noisy, structured, or unstructured data.</p>
+</blockquote>
+<p><a href="https://en.wikipedia.org/wiki/Data_science">Source: Wikipedia</a></p>
+<section id="why-clojure" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="why-clojure"><span class="header-section-number">2.1</span> Why Clojure?</h2>
+<p>I started programming when I was about 14 years old, at the time I had gotten an internship at a startup which was building on Ruby/Rails. I told the CTO at the time that I wanted to learn too and he handed over the legendary <a href="https://www.railstutorial.org/">Michael Hartl’s Ruby on Rails guide</a>. I was stoked and completely failed at it, but I gained a bit of experience</p>
+<p>Fast forward to 2014, I enrolled onto <a href="https://makers.tech/">Makers Academy</a> where I finished a Ruby/Rails bootcamp under the coaching of <a href="https://www.evgeny.coach/">Evgeny Shadchnev</a>, who in one of our sessions talked about <a href="https://lisp-lang.org/">LISP</a> dialects and more specifically <a href="https://clojure.org/">Clojure</a>. There’s a ton of things that make Clojure awesome, here’s a few:</p>
 <ul>
-<li>Introduction to Data Science &amp; Clojure</li>
-<li>Intro to Clojure syntax, data structures, functions</li>
-<li>Setting up Clojure development environment</li>
-<li>Math &amp; Stats Fundamental</li>
-<li>Probability theory, distributions, hypothesis testing</li>
-<li>Linear algebra basics (vectors, matrices, operations)</li>
-<li>Descriptive statistics, exploratory data analysis</li>
-<li>Exercises: Probability problems, basic data analysis</li>
-<li>Data Manipulation with Clojure</li>
-<li>Clojure sequences, collections, and data operations</li>
-<li>Intro to Clojure libs (tablecloth, hanami, fastmath, tech.ml.dataset)</li>
-<li>Data cleaning, merging, reshaping datasets</li>
-<li>Project: Clean and wrangle a dataset</li>
-<li>Data Visualization</li>
-<li>Principles of data visualization (Tufte, Wilkinson)</li>
-<li>Using oz, Vega/Vega-Lite libs for plots in Clojure</li>
-<li>Using plotly</li>
-<li>Creating common plots: Scatter, line, bar, histograms</li>
-<li>Project: Explore and visualize a dataset</li>
-<li>Statistical Models &amp; Regression</li>
-<li>Simple/multiple linear regression</li>
-<li>Model fitting, evaluation metrics</li>
-<li>Case study: Predicting housing prices</li>
-<li>Classification</li>
-<li>Logistic regression, evaluation metrics</li>
-<li>Decision trees, random forests</li>
-<li>Case study: Spam classification</li>
-<li>Feature Engineering, Clustering &amp; Dimensionality Reduction</li>
-<li>K-means clustering</li>
-<li>Principal Component Analysis (PCA)</li>
-<li>Case study: Customer segmentation</li>
-<li>Databases &amp; Big Data</li>
-<li>Intro to databases (SQL, NoSQL, graph)</li>
-<li>Big data concepts (MapReduce, Spark, Hadoop)</li>
-<li>Project: Analyze data from a database</li>
-<li>Natural Language Processing</li>
-<li>Text data preprocessing</li>
-<li>Topic modeling, sentiment analysis</li>
-<li>Project: Analyze text data (reviews, tweets, stock market commentary, etc)</li>
-<li>Time Series &amp; Forecasting</li>
-<li>Trend, seasonality, autocorrelation</li>
-<li>ARIMA, exponential smoothing models</li>
-<li>Case study: Forecast product demand</li>
-<li>Recommendation Systems</li>
-<li>Collaborative filtering</li>
-<li>Matrix factorization techniques</li>
-<li>Project: Build a recommendation engine</li>
-<li>Deep Learning</li>
-<li>Pytorch</li>
-<li>Tensorflow</li>
-<li>MLOps</li>
-<li>MLFlow</li>
-<li>Modern practises, storing and managing models, AWS sagemaker</li>
-<li>Stable diffusion</li>
-<li>Applications &amp; Final Project</li>
-<li>Putting it all together: End-to-end case studies</li>
-<li>Individual final project on data science problem, maybe stock market</li>
+<li>Runs on the <a href="https://en.wikipedia.org/wiki/Java_virtual_machine">JVM</a> so you can access a large ecosystem of libraries</li>
+<li>Supports <a href="https://clojure.org/reference/java_interop">Java interoperability out of the box</a></li>
+<li>Dynamically typed</li>
+<li>Functional</li>
 </ul>
+<p>That being said, I would not say Clojure is a beginner friendly platform, it can very powerful once mastered but I suggest having prior programming experience before picking something like Clojure. A good way to explore a language’s suitability to your preference is to perform little code exercises. I personally like to use <a href="https://www.codewars.com">Codewars</a></p>
+</section>
+<section id="why-data-science" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="why-data-science"><span class="header-section-number">2.2</span> Why data science?</h2>
+<p><a href="https://www.economist.com/leaders/2017/05/06/the-worlds-most-valuable-resource-is-no-longer-oil-but-data">Data is the new oil</a></p>
+<p>Just like Data science is an interdisciplinary field, there’s a few :key: reasons why I decided to go down this route</p>
+<p><strong>It sits close to software engineering</strong>. A lot of my skills as a software engineer do extrapolate, specially when it comes to data engineering, ops/cloud work, etc.</p>
+<p><strong>A promise to a better work/life balance</strong>. Software engineers are often times pushed onto delivering new features as we predominantly worked on businesses funded by investment and not revenue. Over time I have come to terms with the fact that this is the nature of my industry. It does not mean that is healthy by any means. It has definitely improved in the recent years but with a hard recession in tech looming over, we are going to start seeing a lot of it coming back.</p>
+<p><strong>Better pay</strong>. Slightly contested, but it looks like salaries in machine learning &amp; data science are about the same for software engineering without the pressure that comes with software engineering</p>
+</section>
+<section id="methodology" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="methodology"><span class="header-section-number">2.3</span> Methodology</h2>
+<p>How am I writing this book? Well, I was inspired by a talk on <a href="https://www.youtube.com/watch?v=eUFf3-og_-Y">London Clojurians</a> where the <a href="https://scicloj.github.io/">scicloj stack</a> was displayed, coming from a workflow where I have a terminal on one side of the screen and my text editor on the other one, and having to either navigate to the browser to check a server or make a staging deployment, I found this new approach super refreshing as it tightens the feedback loop one gets when writing programs. It works as follows:</p>
+<ul>
+<li>Provision a text editor with key bindings to an IDE that can run Clojure. I am using the <a href="https://github.com/corgi-emacs/corgi">corgi</a> flavour of emacs &amp; <a href="https://cider.mx/">CIDER</a></li>
+<li>Setup a project that has data manipulation &amp; visualisation libraries. I am using <a href="https://github.com/scicloj/tablecloth">tablecloth</a>, <a href="https://github.com/scicloj/clay">clay</a> &amp; <a href="https://github.com/scicloj/kindly">kindly</a></li>
+<li>You can now write code from your text editor and evaluate it in the editor itself to visualise and manipulate information, the same way you’d do with a Jupyter Notebook</li>
+</ul>
+</section>
+<section id="demo" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="demo"><span class="header-section-number">2.4</span> Demo</h2>
+<p>This file itself is a great demo of the stack. The markdown rendered text is actually code comments in a Clojure file and all Clojure code is evaluated and rendered onto the document itself</p>
+<p>Here’s an example dataset displaying passenger data from The Titanic</p>
+<div class="sourceClojure">
+<div class="sourceCode" id="cb2"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>(<span class="kw">-&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a> (data/titanic-ds-split)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a> <span class="at">:train</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a> (tc/dataset)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a> (tc/head <span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="clay-dataset">
+<p>_unnamed [10 12]:</p>
+<table class="table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 6%">
+<col style="width: 5%">
+<col style="width: 32%">
+<col style="width: 4%">
+<col style="width: 3%">
+<col style="width: 5%">
+<col style="width: 4%">
+<col style="width: 10%">
+<col style="width: 5%">
+<col style="width: 4%">
+<col style="width: 6%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">:passenger-id</th>
+<th style="text-align: right;">:survived</th>
+<th style="text-align: right;">:pclass</th>
+<th>:name</th>
+<th>:sex</th>
+<th style="text-align: right;">:age</th>
+<th style="text-align: right;">:sib-sp</th>
+<th style="text-align: right;">:parch</th>
+<th>:ticket</th>
+<th style="text-align: right;">:fare</th>
+<th>:cabin</th>
+<th>:embarked</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td>Braund, Mr.&nbsp;Owen Harris</td>
+<td>male</td>
+<td style="text-align: right;">22.0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td>A/5 21171</td>
+<td style="text-align: right;">7.2500</td>
+<td></td>
+<td>S</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td>Cumings, Mrs.&nbsp;John Bradley (Florence Briggs Thayer)</td>
+<td>female</td>
+<td style="text-align: right;">38.0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td>PC 17599</td>
+<td style="text-align: right;">71.2833</td>
+<td>C85</td>
+<td>C</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td>Heikkinen, Miss. Laina</td>
+<td>female</td>
+<td style="text-align: right;">26.0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td>STON/O2. 3101282</td>
+<td style="text-align: right;">7.9250</td>
+<td></td>
+<td>S</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td>Futrelle, Mrs.&nbsp;Jacques Heath (Lily May Peel)</td>
+<td>female</td>
+<td style="text-align: right;">35.0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td>113803</td>
+<td style="text-align: right;">53.1000</td>
+<td>C123</td>
+<td>S</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td>Allen, Mr.&nbsp;William Henry</td>
+<td>male</td>
+<td style="text-align: right;">35.0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td>373450</td>
+<td style="text-align: right;">8.0500</td>
+<td></td>
+<td>S</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td>Moran, Mr.&nbsp;James</td>
+<td>male</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td>330877</td>
+<td style="text-align: right;">8.4583</td>
+<td></td>
+<td>Q</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td>McCarthy, Mr.&nbsp;Timothy J</td>
+<td>male</td>
+<td style="text-align: right;">54.0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td>17463</td>
+<td style="text-align: right;">51.8625</td>
+<td>E46</td>
+<td>S</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td>Palsson, Master. Gosta Leonard</td>
+<td>male</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td>349909</td>
+<td style="text-align: right;">21.0750</td>
+<td></td>
+<td>S</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td>Johnson, Mrs.&nbsp;Oscar W (Elisabeth Vilhelmina Berg)</td>
+<td>female</td>
+<td style="text-align: right;">27.0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td>347742</td>
+<td style="text-align: right;">11.1333</td>
+<td></td>
+<td>S</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td>Nasser, Mrs.&nbsp;Nicholas (Adele Achem)</td>
+<td>female</td>
+<td style="text-align: right;">14.0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td>237736</td>
+<td style="text-align: right;">30.0708</td>
+<td></td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>And here’s a demo of visualising a chart using <a href="https://plotly.com/">Plotly</a></p>
+<div class="sourceClojure">
+<div class="sourceCode" id="cb3"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>(<span class="bu">def</span><span class="fu"> plotly-example</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  {<span class="at">:data</span> [{<span class="at">:x</span> [<span class="dv">0</span> <span class="dv">1</span> <span class="dv">3</span> <span class="dv">2</span>]</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">:y</span> [<span class="dv">0</span> <span class="dv">6</span> <span class="dv">4</span> <span class="dv">5</span>]</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">:z</span> [<span class="dv">0</span> <span class="dv">8</span> <span class="dv">9</span> <span class="dv">7</span>]</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">:type</span> <span class="at">:scatter3d</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>           <span class="at">:mode</span> <span class="at">:lines</span>+markers</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>           <span class="at">:opacity</span> <span class="fl">0.5</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>           <span class="at">:line</span> {<span class="at">:width</span> <span class="dv">5</span>}</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>           <span class="at">:marker</span> {<span class="at">:size</span> <span class="dv">4</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>                    <span class="at">:colorscale</span> <span class="at">:Viridis</span>}}]</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>   <span class="at">:layout</span> {<span class="at">:title</span> <span class="st">"Plotly example"</span>}})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="sourceClojure">
+<div class="sourceCode" id="cb4"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(kind/plotly</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a> plotly-example)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div style="height:400px;width:100%;"><script>Plotly.newPlot(document.currentScript.parentElement,
+              [{"x":[0,1,3,2],"y":[0,6,4,5],"z":[0,8,9,7],"type":"scatter3d","mode":"lines+markers","opacity":0.5,"line":{"width":5},"marker":{"size":4,"colorscale":"Viridis"}}], {"title":"Plotly example"}, {});</script></div>
 <div style="background-color:grey;height:2px;width:100%;"></div>
-<div><pre><small><small>source: src/index.clj</small></small></pre></div>
+<div><pre><small><small>source: src/notebooks/intro.clj</small></small></pre></div>
 
 
 </section>
@@ -688,11 +867,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Clojure for data science">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Clojure for data science</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./notebooks.intro.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

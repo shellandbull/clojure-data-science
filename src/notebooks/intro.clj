@@ -3,7 +3,7 @@
             [scicloj.metamorph.ml.toydata :as data]
             [scicloj.kindly.v4.kind :as kind]))
 
-;; # Introduction | Clojure & Data Science
+;; # Introduction
 
 ;; > Data science is an interdisciplinary academic field[1] that uses statistics, scientific computing, scientific methods, processes, scientific visualization, algorithms and systems to extract or extrapolate knowledge and insights from potentially noisy, structured, or unstructured data.
 
