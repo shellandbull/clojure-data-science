@@ -58,5 +58,175 @@
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
     ]
+  },
+  {
+    "objectID": "notebooks.clojure.html",
+    "href": "notebooks.clojure.html",
+    "title": "3  Clojure",
+    "section": "",
+    "text": "3.1 Literals",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks.clojure.html#characters",
+    "href": "notebooks.clojure.html#characters",
+    "title": "3  Clojure",
+    "section": "3.2 Characters",
+    "text": "3.2 Characters",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks.clojure.html#symbols",
+    "href": "notebooks.clojure.html#symbols",
+    "title": "3  Clojure",
+    "section": "3.3 Symbols",
+    "text": "3.3 Symbols",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks.clojure.html#collections",
+    "href": "notebooks.clojure.html#collections",
+    "title": "3  Clojure",
+    "section": "3.4 Collections",
+    "text": "3.4 Collections",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks.clojure.html#structure",
+    "href": "notebooks.clojure.html#structure",
+    "title": "3  Clojure",
+    "section": "3.5 Structure",
+    "text": "3.5 Structure",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks.clojure.html#delayed-evaluation",
+    "href": "notebooks.clojure.html#delayed-evaluation",
+    "title": "3  Clojure",
+    "section": "3.6 Delayed evaluation",
+    "text": "3.6 Delayed evaluation",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks.clojure.html#repl-explorations-interactive-programming",
+    "href": "notebooks.clojure.html#repl-explorations-interactive-programming",
+    "title": "3  Clojure",
+    "section": "3.7 REPL, explorations & interactive programming",
+    "text": "3.7 REPL, explorations & interactive programming",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks.clojure.html#functions",
+    "href": "notebooks.clojure.html#functions",
+    "title": "3  Clojure",
+    "section": "3.8 Functions",
+    "text": "3.8 Functions\n\n3.8.1 Multi arity functions\n\n\n3.8.2 Rest/split functions\n\n\n3.8.3 defn vs fn",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks.clojure.html#applying-functions",
+    "href": "notebooks.clojure.html#applying-functions",
+    "title": "3  Clojure",
+    "section": "3.9 Applying functions",
+    "text": "3.9 Applying functions\n\n3.9.1 apply",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks.clojure.html#locals-closures",
+    "href": "notebooks.clojure.html#locals-closures",
+    "title": "3  Clojure",
+    "section": "3.10 Locals & closures",
+    "text": "3.10 Locals & closures\n\n3.10.1 let\n\n\n3.10.2 defn\n\n\n3.10.3 Closures",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks.clojure.html#java-interoperability",
+    "href": "notebooks.clojure.html#java-interoperability",
+    "title": "3  Clojure",
+    "section": "3.11 Java Interoperability",
+    "text": "3.11 Java Interoperability",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks.clojure.html#sequential-collections",
+    "href": "notebooks.clojure.html#sequential-collections",
+    "title": "3  Clojure",
+    "section": "3.12 Sequential collections",
+    "text": "3.12 Sequential collections\n\n3.12.1 Vectors\n\n\n3.12.2 Lists",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks.clojure.html#hashed-collections",
+    "href": "notebooks.clojure.html#hashed-collections",
+    "title": "3  Clojure",
+    "section": "3.13 Hashed collections",
+    "text": "3.13 Hashed collections\n\n3.13.1 Sets\n\n\n3.13.2 Maps\n\n\n3.13.3 Representing domain data",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks.clojure.html#flow-control",
+    "href": "notebooks.clojure.html#flow-control",
+    "title": "3  Clojure",
+    "section": "3.14 Flow control",
+    "text": "3.14 Flow control\n\n3.14.1 Statements vs expressions\n\n\n3.14.2 Flow control expressions",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks.clojure.html#recursion",
+    "href": "notebooks.clojure.html#recursion",
+    "title": "3  Clojure",
+    "section": "3.15 Recursion",
+    "text": "3.15 Recursion",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks.clojure.html#exceptions",
+    "href": "notebooks.clojure.html#exceptions",
+    "title": "3  Clojure",
+    "section": "3.16 Exceptions",
+    "text": "3.16 Exceptions",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks.clojure.html#namespaces",
+    "href": "notebooks.clojure.html#namespaces",
+    "title": "3  Clojure",
+    "section": "3.17 Namespaces",
+    "text": "3.17 Namespaces\n\n3.17.1 Declaring namespaces\n\n\n3.17.2 Java classes and imports\n\nsource: src/notebooks/clojure.clj",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
+    ]
   }
 ]

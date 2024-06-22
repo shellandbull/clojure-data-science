@@ -3,6 +3,7 @@
             [scicloj.noj.v1.vis.hanami :as hanami]
             [aerial.hanami.templates :as ht]
             [scicloj.kindly.v4.kind :as kind]))
+
 ;; # Clojure
 
 ;; > Clojure is a dynamic, general-purpose programming language, combining the approachability and interactive development of a scripting language with an efficient and robust infrastructure for multithreaded programming.
@@ -11,15 +12,45 @@
 
 ;; ## Literals
 
-;; ## Characters
+"I am a string"
+#"[0-9]" ;; a regex
+
+;; Numeric types
+
+51
+-1.5
+1/4
 
 ;; ## Symbols
 
+;; A symbol is a reference to something else like a function, a value, a namespace, etc. Symbols can have a namespace, separated with a forward slash from the boolean values.
+
+;; In a language like Ruby symbols are basically a frozen string, whereas in Cloure they are a reference to something else
+
+;; Keywords on the other hand start leading with a colon and always evaluate themselves
+
+map
++
+clojure.string/blank?
+nil
+:alpha
+:foo/bar
+
 ;; ## Collections
 
-;; ## Structure
+;; Clojure has 4 core collection types
+
+'(10 10 10 9) ;; list
+[20 10 1960] ;; vector
+#{6 5 4 2 10} ;; set
+{:a 1, :b 2} ;; map
 
 ;; ## Delayed evaluation
+
+;; Clojure offers delaying the evaluation of an expression
+;; with the use of a quote before the expression
+
+;;
 
 ;; ## REPL, explorations & interactive programming
 
