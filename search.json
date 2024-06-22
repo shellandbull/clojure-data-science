@@ -94,7 +94,7 @@
     "href": "notebooks.clojure.html#collections",
     "title": "3  Clojure",
     "section": "3.3 Collections",
-    "text": "3.3 Collections\nClojure has 4 core collection types\nlist\n\n[20 10 1960]\n\n\n[20 10 1960]\n\nvector\n\n#{6 5 4 2 10}\n\n\n#{4 6 2 5 10}\n\nset\n\n{:a 1, :b 2}\n\n\n{:a 1, :b 2}\n\nmap",
+    "text": "3.3 Collections\nClojure has 4 core collection types\nlist\nvector\n\n[20 10 1960]\n\n\n[20 10 1960]\n\nset\n\n#{6 5 4 2 10}\n\n\n#{4 6 2 5 10}\n\nmap\n\n{:a 1, :b 2}\n\n\n{:a 1, :b 2}",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
     ]
