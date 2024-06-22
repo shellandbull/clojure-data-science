@@ -40,10 +40,17 @@ nil
 
 ;; Clojure has 4 core collection types
 
-'(10 10 10 9) ;; list
-[20 10 1960] ;; vector
-#{6 5 4 2 10} ;; set
-{:a 1, :b 2} ;; map
+;; list
+'(10 10 10 9)
+
+;; vector
+[20 10 1960]
+
+;; set
+#{6 5 4 2 10}
+
+;; map
+{:a 1, :b 2}
 
 ;; ## Delayed evaluation
 

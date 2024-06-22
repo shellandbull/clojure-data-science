@@ -227,6 +227,9 @@ Clojure has 4 core collection types
 list
 
 
+vector
+
+
 ::: {.sourceClojure}
 ```clojure
 [20 10 1960]
@@ -243,7 +246,7 @@ list
 :::
 
 
-vector
+set
 
 
 ::: {.sourceClojure}
@@ -262,7 +265,7 @@ vector
 :::
 
 
-set
+map
 
 
 ::: {.sourceClojure}
@@ -280,8 +283,6 @@ set
 ```
 :::
 
-
-map
 
 
 ## Delayed evaluation
