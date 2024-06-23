@@ -41,7 +41,7 @@ nil
 ;; Clojure has 4 core collection types
 
 ;; list
-'(10 10 10 9)
+(10 10 10 9)
 
 ;; vector
 [20 10 1960]
