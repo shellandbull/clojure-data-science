@@ -10,16 +10,19 @@
 
 ;; [source](https://clojure.org/)
 
-;; ## Literals
+;; Cloure's official website has a really well and thorough documentation section.
+;; Because of that there isn't really a need for me to go over it again.
 
-"I am a string"
-#"[0-9]" ;; a regex
+;; That being said, I am learning Clojure myself so I will be putting down examples of every primitive that makes up the language itself
 
-;; Numeric types
 
-51
--1.5
-1/4
+;; ## Numbers
+
+;; ```clojure
+;; 42   ; integer
+;; -1.5 ; floating point
+;; 22/7 ; ratio
+;; ```
 
 ;; ## Symbols
 
@@ -29,12 +32,14 @@
 
 ;; Keywords on the other hand start leading with a colon and always evaluate themselves
 
-map
-+
-clojure.string/blank?
-nil
-:alpha
-:foo/bar
+;; ```clojure`
+;; map
+;; +
+;; clojure.string/blank?
+;; nil
+;; :alpha
+;; :foo/bar
+;; ````
 
 ;; ## Collections
 
