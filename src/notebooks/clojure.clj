@@ -15,16 +15,7 @@
 
 ;; That being said, I am learning Clojure myself so I will be putting down examples of every primitive that makes up the language itself
 
-
 ;; ## Numbers
-
-;; ```clojure
-;; 42   ; integer
-;; -1.5 ; floating point
-;; 22/7 ; ratio
-;; ```
-
-;; ## Symbols
 
 ;; A symbol is a reference to something else like a function, a value, a namespace, etc. Symbols can have a namespace, separated with a forward slash from the boolean values.
 
@@ -32,32 +23,9 @@
 
 ;; Keywords on the other hand start leading with a colon and always evaluate themselves
 
-;; ```clojure`
-;; map
-;; +
-;; clojure.string/blank?
-;; nil
-;; :alpha
-;; :foo/bar
-;; ````
-
 ;; ## Collections
 
 ;; Clojure has 4 core collection types
-
-;; list
-(10 10 10 9)
-
-;; vector
-[20 10 1960]
-
-;; set
-#{6 5 4 2 10}
-
-;; map
-{:a 1, :b 2}
-
-;; ## Delayed evaluation
 
 ;; Clojure offers delaying the evaluation of an expression
 ;; with the use of a quote before the expression
