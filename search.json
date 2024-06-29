@@ -70,11 +70,21 @@
     ]
   },
   {
+    "objectID": "notebooks.clojure.html#numbers",
+    "href": "notebooks.clojure.html#numbers",
+    "title": "3  Clojure",
+    "section": "",
+    "text": "1\n\n\n1\n\n\n1000\n\n\n1000\n\n\n-1\n\n\n-1\n\n\n0.3\n\n\n0.3\n\n\n1/4\n\n\n1/4",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
+    ]
+  },
+  {
     "objectID": "notebooks.clojure.html#collections",
     "href": "notebooks.clojure.html#collections",
     "title": "3  Clojure",
     "section": "3.2 Collections",
-    "text": "3.2 Collections\nClojure has 4 core collection types\nClojure offers delaying the evaluation of an expression with the use of a quote before the expression",
+    "text": "3.2 Collections\nClojure has 4 core collection types\nlist\n\n[1 2 3]\n\n\n[1 2 3]\n\nvector\n\n#{1 10 19}\n\n\n#{1 19 10}\n\nset\n\n{:a 1, :b 2}\n\n\n{:a 1, :b 2}\n\nmap\nClojure offers delaying the evaluation of an expression with the use of a quote before the expression",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
     ]
@@ -84,7 +94,7 @@
     "href": "notebooks.clojure.html#repl-explorations-interactive-programming",
     "title": "3  Clojure",
     "section": "3.3 REPL, explorations & interactive programming",
-    "text": "3.3 REPL, explorations & interactive programming",
+    "text": "3.3 REPL, explorations & interactive programming\nClojure’s REPL works the same as any other REPL out there a user types in instructions on a buffer which is then immediately evaluated. One may load a namespace onto the REPL to access functions defined in a codebase\n\n(+ 4 1)\n\n\n5\n\nNow onto one of my favourite features. Interactive programming\nClojure has some really tight integrations with some text editors like Emacs, put together with tools like CIDER an interactive REPL server, you can write key binding commands that immediately evaluate code on a file, line by line, section by section or namespace by namespace and immediately display it on the browser or a terminal buffer, without you having to ever leave the INSERT mode from that file. Here’s a step-by-step example of my workflow for writing this book:\n\nI open a file in emacs, mine uses the corgi flavour, using the key bindings SPC + F + $filename\nThe file is displayed onto the screen. I am using emacs on evil mode so I type in a to start INSERT mode.\nI type in some code. e,g: (+ 1 2 3)\nI exit INSERT mode by pressing ESC\nI boot and connect to a CIDER server by invoking the command SPC + j + j\nThe server boots and a prompt appears on emacs displaying the host, port, etc. I drop the cursor onto the closing parenthesis of the code and invoke the command SPC + e + e. In this case that combo of keys is bound to the emacs command eval-form-before-cursor which evaluates the code and displays it on the REPL\nI can now visualise my code as I go\n\nIn this example I went for something simple like a function with 3 arguments, but the possibilities are endless. If you go back to earlier chapters in the book you can see the amount of code that I needed to render a 3D chart using Plotly. This creates a super tight feedback loop which is close to codewatching solutions(watchman, guard, etc)\nAt any time I can just type in SPC + SPC and a search bar will pop up like Apple’s spotlight search where I can look up any function loaded onto my emacs. That includes from changing the cursor from blink mode or not all the way to using Spotify & email.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
     ]
