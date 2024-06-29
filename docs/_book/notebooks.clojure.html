@@ -261,6 +261,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>That being said, I am learning Clojure myself so I will be putting down examples of every primitive that makes up the language itself</p>
 <section id="numbers" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="numbers"><span class="header-section-number">3.1</span> Numbers</h2>
+<div class="sourceClojure">
+<div class="sourceCode" id="cb2"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="printedClojure">
+<div class="sourceCode" id="cb3"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="sourceClojure">
+<div class="sourceCode" id="cb4"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1000</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="printedClojure">
+<div class="sourceCode" id="cb5"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1000</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="sourceClojure">
+<div class="sourceCode" id="cb6"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>-<span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="printedClojure">
+<div class="sourceCode" id="cb7"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>-<span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="sourceClojure">
+<div class="sourceCode" id="cb8"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fl">0.3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="printedClojure">
+<div class="sourceCode" id="cb9"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fl">0.3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="sourceClojure">
+<div class="sourceCode" id="cb10"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fl">1/4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="printedClojure">
+<div class="sourceCode" id="cb11"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fl">1/4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>A symbol is a reference to something else like a function, a value, a namespace, etc. Symbols can have a namespace, separated with a forward slash from the boolean values.</p>
 <p>In a language like Ruby symbols are basically a frozen string, whereas in Cloure they are a reference to something else</p>
 <p>Keywords on the other hand start leading with a colon and always evaluate themselves</p>
@@ -268,10 +298,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="collections" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="collections"><span class="header-section-number">3.2</span> Collections</h2>
 <p>Clojure has 4 core collection types</p>
+<p>list</p>
+<div class="sourceClojure">
+<div class="sourceCode" id="cb12"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span> <span class="dv">2</span> <span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="printedClojure">
+<div class="sourceCode" id="cb13"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span> <span class="dv">2</span> <span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>vector</p>
+<div class="sourceClojure">
+<div class="sourceCode" id="cb14"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>#{<span class="dv">1</span> <span class="dv">10</span> <span class="dv">19</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="printedClojure">
+<div class="sourceCode" id="cb15"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>#{<span class="dv">1</span> <span class="dv">19</span> <span class="dv">10</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>set</p>
+<div class="sourceClojure">
+<div class="sourceCode" id="cb16"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>{<span class="at">:a</span> <span class="dv">1</span>, <span class="at">:b</span> <span class="dv">2</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="printedClojure">
+<div class="sourceCode" id="cb17"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>{<span class="at">:a</span> <span class="dv">1</span>, <span class="at">:b</span> <span class="dv">2</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>map</p>
 <p>Clojure offers delaying the evaluation of an expression with the use of a quote before the expression</p>
 </section>
 <section id="repl-explorations-interactive-programming" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="repl-explorations-interactive-programming"><span class="header-section-number">3.3</span> REPL, explorations &amp; interactive programming</h2>
+<p>Clojure’s REPL works the same as any other REPL out there a user types in instructions on a buffer which is then immediately evaluated. One may load a namespace onto the REPL to access functions defined in a codebase</p>
+<div class="sourceClojure">
+<div class="sourceCode" id="cb18"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>(<span class="kw">+</span> <span class="dv">4</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="printedClojure">
+<div class="sourceCode" id="cb19"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now onto one of my favourite features. <a href="https://docs.cider.mx/cider/usage/interactive_programming.html">Interactive programming</a></p>
+<p>Clojure has some really tight integrations with some text editors like Emacs, put together with tools like CIDER an interactive REPL server, you can write key binding commands that immediately evaluate code on a file, line by line, section by section or namespace by namespace and immediately display it on the browser or a terminal buffer, without you having to ever leave the <code>INSERT</code> mode from that file. Here’s a step-by-step example of my workflow for writing this book:</p>
+<ul>
+<li>I open a file in emacs, mine uses the <a href="https://github.com/corgi-emacs/corgi">corgi</a> flavour, using the key bindings <code>SPC</code> + <code>F</code> + <code>$filename</code></li>
+<li>The file is displayed onto the screen. I am using emacs on evil mode so I type in <code>a</code> to start <code>INSERT</code> mode.</li>
+<li>I type in some code. e,g: <code>(+ 1 2 3)</code></li>
+<li>I exit <code>INSERT</code> mode by pressing <code>ESC</code></li>
+<li>I boot and connect to a CIDER server by invoking the command <code>SPC</code> + <code>j</code> + <code>j</code></li>
+<li>The server boots and a prompt appears on emacs displaying the host, port, etc. I drop the cursor onto the closing parenthesis of the code and invoke the command <code>SPC</code> + <code>e</code> + <code>e</code>. In this case that combo of keys is bound to the emacs command <code>eval-form-before-cursor</code> which evaluates the code and displays it on the REPL</li>
+<li>I can now visualise my code as I go</li>
+</ul>
+<p>In this example I went for something simple like a function with 3 arguments, but the possibilities are endless. If you go back to earlier chapters in the book you can see the amount of code that I needed to render a 3D chart using Plotly. This creates a super tight feedback loop which is close to codewatching solutions(watchman, guard, etc)</p>
+<p>At any time I can just type in <code>SPC</code> + <code>SPC</code> and a search bar will pop up like Apple’s spotlight search where I can look up any function loaded onto my emacs. That includes from changing the cursor from blink mode or not all the way to using Spotify &amp; email.</p>
 </section>
 <section id="functions" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="functions"><span class="header-section-number">3.4</span> Functions</h2>

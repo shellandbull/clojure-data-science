@@ -126,6 +126,159 @@ That being said, I am learning Clojure myself so I will be putting down examples
 :::
 
 
+
+## Symbols
+
+
+::: {.sourceClojure}
+```clojure
+take
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+#function[clojure.core/take]
+
+```
+:::
+
+
+symbol
+
+
+::: {.sourceClojure}
+```clojure
+-
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+#function[clojure.core/-]
+
+```
+:::
+
+
+symbol - most punctuation allowed
+
+
+::: {.sourceClojure}
+```clojure
+clojure.core/+
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+#function[clojure.core/+]
+
+```
+:::
+
+
+namespaced symbol
+
+
+::: {.sourceClojure}
+```clojure
+nil
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+nil
+
+```
+:::
+
+
+null value
+
+
+::: {.sourceClojure}
+```clojure
+true
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+true
+
+```
+:::
+
+
+
+::: {.sourceClojure}
+```clojure
+false
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+false
+
+```
+:::
+
+
+booleans
+
+
+::: {.sourceClojure}
+```clojure
+:alpha
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+:alpha
+
+```
+:::
+
+
+keyword
+
+
+::: {.sourceClojure}
+```clojure
+:release/alpha
+```
+:::
+
+
+
+::: {.printedClojure}
+```clojure
+:release/alpha
+
+```
+:::
+
+
+keyword with namespace
+
 A symbol is a reference to something else like a function, a value, a namespace, etc. Symbols can have a namespace, separated with a forward slash from the boolean values.
 
 In a language like Ruby symbols are basically a frozen string, whereas in Cloure they are a reference to something else

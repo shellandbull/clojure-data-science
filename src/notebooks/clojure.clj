@@ -23,6 +23,16 @@
 0.3
 1/4
 
+;; ## Symbols
+
+take            ; symbol
+-               ; symbol - most punctuation allowed
+clojure.core/+  ; namespaced symbol
+nil             ; null value
+true false      ; booleans
+:alpha          ; keyword
+:release/alpha  ; keyword with namespace
+
 ;; A symbol is a reference to something else like a function, a value, a namespace, etc. Symbols can have a namespace, separated with a forward slash from the boolean values.
 
 ;; In a language like Ruby symbols are basically a frozen string, whereas in Cloure they are a reference to something else
