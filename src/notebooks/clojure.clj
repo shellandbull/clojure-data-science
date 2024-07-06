@@ -43,15 +43,18 @@ true false      ; booleans
 
 ;; Clojure has 4 core collection types
 
-'(1 2 3) ; list
+;; `'(1 2 3)` a list
+
 [1 2 3] ; vector
+
 #{1 10 19} ; set
+
 {:a 1, :b 2} ; map
 
 ;; Clojure offers delaying the evaluation of an expression
 ;; with the use of a quote before the expression
 
-'not-defined-but-wont-break-as-its-not-evaluated
+;; `'not-defined-but-wont-break-as-its-not-evaluated``
 
 ;; ## REPL, explorations & interactive programming
 
@@ -78,9 +81,47 @@ true false      ; booleans
 
 ;; At any time I can just type in `SPC` + `SPC` and a search bar will pop up like Apple's spotlight search where I can look up any function loaded onto my emacs. That includes from changing the cursor from blink mode or not all the way to using Spotify & email.
 
+;; ### Some relevant utilities to use with the REPL
+
+;; Looking up documentation is very easy as the function macro accepts a docstring
+
+(clojure.repl/doc +)
+
+;; If you can't remember the name of something you can lookup for similar things
+
+(clojure.repl/apropos "recur")
+
+;; Search can be wider too with `find-doc`
+
+(clojure.repl/find-doc "trim")
+
+;; And at last, here's all the exercises for the syntax section of the learn clojure guides
+
+(+ 7654 1234)
+(-> 3
+    (* 4)
+    (+ 5 7)
+    (/ 10))
+(clojure.repl/doc rem)
+(clojure.repl/doc mod)
+(clojure.repl/doc *1)
+
 ;; ## Functions
 
+;; Functions are first class citizens and can be cascaded and returned from other functions. Most clojure
+;; you'll see in the wild is written in pure functions(no side effects) which make it very easy to think about
+
+(defn celsius-to-farenheit [temp]
+  (-> temp
+      (* 1.8)
+      (+ 32))
+  )
+
+(celsius-to-farenheit 23)
+
 ;; ### Multi arity functions
+
+;; Functions can take a different number of parameters. The multiple argument sets must be defined inside the same `defn` block
 
 ;; ### Rest/split functions
 

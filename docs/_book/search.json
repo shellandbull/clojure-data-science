@@ -64,7 +64,7 @@
     "href": "notebooks.clojure.html",
     "title": "3  Clojure",
     "section": "",
-    "text": "3.1 Numbers\nA symbol is a reference to something else like a function, a value, a namespace, etc. Symbols can have a namespace, separated with a forward slash from the boolean values.\nIn a language like Ruby symbols are basically a frozen string, whereas in Cloure they are a reference to something else\nKeywords on the other hand start leading with a colon and always evaluate themselves",
+    "text": "3.1 Numbers",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
     ]
@@ -80,11 +80,21 @@
     ]
   },
   {
+    "objectID": "notebooks.clojure.html#symbols",
+    "href": "notebooks.clojure.html#symbols",
+    "title": "3  Clojure",
+    "section": "3.2 Symbols",
+    "text": "3.2 Symbols\n\ntake\n\n\n#function[clojure.core/take]\n\nsymbol\n\n-\n\n\n#function[clojure.core/-]\n\nsymbol - most punctuation allowed\n\nclojure.core/+\n\n\n#function[clojure.core/+]\n\nnamespaced symbol\n\nnil\n\n\nnil\n\nnull value\n\ntrue\n\n\ntrue\n\n\nfalse\n\n\nfalse\n\nbooleans\n\n:alpha\n\n\n:alpha\n\nkeyword\n\n:release/alpha\n\n\n:release/alpha\n\nkeyword with namespace\nA symbol is a reference to something else like a function, a value, a namespace, etc. Symbols can have a namespace, separated with a forward slash from the boolean values.\nIn a language like Ruby symbols are basically a frozen string, whereas in Cloure they are a reference to something else\nKeywords on the other hand start leading with a colon and always evaluate themselves",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
+    ]
+  },
+  {
     "objectID": "notebooks.clojure.html#collections",
     "href": "notebooks.clojure.html#collections",
     "title": "3  Clojure",
-    "section": "3.2 Collections",
-    "text": "3.2 Collections\nClojure has 4 core collection types\nlist\n\n[1 2 3]\n\n\n[1 2 3]\n\nvector\n\n#{1 10 19}\n\n\n#{1 19 10}\n\nset\n\n{:a 1, :b 2}\n\n\n{:a 1, :b 2}\n\nmap\nClojure offers delaying the evaluation of an expression with the use of a quote before the expression",
+    "section": "3.3 Collections",
+    "text": "3.3 Collections\nClojure has 4 core collection types\nlist\n\n[1 2 3]\n\n\n[1 2 3]\n\nvector\n\n#{1 10 19}\n\n\n#{1 19 10}\n\nset\n\n{:a 1, :b 2}\n\n\n{:a 1, :b 2}\n\nmap\nClojure offers delaying the evaluation of an expression with the use of a quote before the expression",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
     ]
@@ -93,8 +103,8 @@
     "objectID": "notebooks.clojure.html#repl-explorations-interactive-programming",
     "href": "notebooks.clojure.html#repl-explorations-interactive-programming",
     "title": "3  Clojure",
-    "section": "3.3 REPL, explorations & interactive programming",
-    "text": "3.3 REPL, explorations & interactive programming\nClojure’s REPL works the same as any other REPL out there a user types in instructions on a buffer which is then immediately evaluated. One may load a namespace onto the REPL to access functions defined in a codebase\n\n(+ 4 1)\n\n\n5\n\nNow onto one of my favourite features. Interactive programming\nClojure has some really tight integrations with some text editors like Emacs, put together with tools like CIDER an interactive REPL server, you can write key binding commands that immediately evaluate code on a file, line by line, section by section or namespace by namespace and immediately display it on the browser or a terminal buffer, without you having to ever leave the INSERT mode from that file. Here’s a step-by-step example of my workflow for writing this book:\n\nI open a file in emacs, mine uses the corgi flavour, using the key bindings SPC + F + $filename\nThe file is displayed onto the screen. I am using emacs on evil mode so I type in a to start INSERT mode.\nI type in some code. e,g: (+ 1 2 3)\nI exit INSERT mode by pressing ESC\nI boot and connect to a CIDER server by invoking the command SPC + j + j\nThe server boots and a prompt appears on emacs displaying the host, port, etc. I drop the cursor onto the closing parenthesis of the code and invoke the command SPC + e + e. In this case that combo of keys is bound to the emacs command eval-form-before-cursor which evaluates the code and displays it on the REPL\nI can now visualise my code as I go\n\nIn this example I went for something simple like a function with 3 arguments, but the possibilities are endless. If you go back to earlier chapters in the book you can see the amount of code that I needed to render a 3D chart using Plotly. This creates a super tight feedback loop which is close to codewatching solutions(watchman, guard, etc)\nAt any time I can just type in SPC + SPC and a search bar will pop up like Apple’s spotlight search where I can look up any function loaded onto my emacs. That includes from changing the cursor from blink mode or not all the way to using Spotify & email.",
+    "section": "3.4 REPL, explorations & interactive programming",
+    "text": "3.4 REPL, explorations & interactive programming\nClojure’s REPL works the same as any other REPL out there a user types in instructions on a buffer which is then immediately evaluated. One may load a namespace onto the REPL to access functions defined in a codebase\n\n(+ 4 1)\n\n\n5\n\nNow onto one of my favourite features. Interactive programming\nClojure has some really tight integrations with some text editors like Emacs, put together with tools like CIDER an interactive REPL server, you can write key binding commands that immediately evaluate code on a file, line by line, section by section or namespace by namespace and immediately display it on the browser or a terminal buffer, without you having to ever leave the INSERT mode from that file. Here’s a step-by-step example of my workflow for writing this book:\n\nI open a file in emacs, mine uses the corgi flavour, using the key bindings SPC + F + $filename\nThe file is displayed onto the screen. I am using emacs on evil mode so I type in a to start INSERT mode.\nI type in some code. e,g: (+ 1 2 3)\nI exit INSERT mode by pressing ESC\nI boot and connect to a CIDER server by invoking the command SPC + j + j\nThe server boots and a prompt appears on emacs displaying the host, port, etc. I drop the cursor onto the closing parenthesis of the code and invoke the command SPC + e + e. In this case that combo of keys is bound to the emacs command eval-form-before-cursor which evaluates the code and displays it on the REPL\nI can now visualise my code as I go\n\nIn this example I went for something simple like a function with 3 arguments, but the possibilities are endless. If you go back to earlier chapters in the book you can see the amount of code that I needed to render a 3D chart using Plotly. This creates a super tight feedback loop which is close to codewatching solutions(watchman, guard, etc)\nAt any time I can just type in SPC + SPC and a search bar will pop up like Apple’s spotlight search where I can look up any function loaded onto my emacs. That includes from changing the cursor from blink mode or not all the way to using Spotify & email.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
     ]
@@ -103,8 +113,8 @@
     "objectID": "notebooks.clojure.html#functions",
     "href": "notebooks.clojure.html#functions",
     "title": "3  Clojure",
-    "section": "3.4 Functions",
-    "text": "3.4 Functions\n\n3.4.1 Multi arity functions\n\n\n3.4.2 Rest/split functions\n\n\n3.4.3 defn vs fn",
+    "section": "3.5 Functions",
+    "text": "3.5 Functions\n\n3.5.1 Multi arity functions\n\n\n3.5.2 Rest/split functions\n\n\n3.5.3 defn vs fn",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
     ]
@@ -113,8 +123,8 @@
     "objectID": "notebooks.clojure.html#applying-functions",
     "href": "notebooks.clojure.html#applying-functions",
     "title": "3  Clojure",
-    "section": "3.5 Applying functions",
-    "text": "3.5 Applying functions\n\n3.5.1 apply",
+    "section": "3.6 Applying functions",
+    "text": "3.6 Applying functions\n\n3.6.1 apply",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
     ]
@@ -123,8 +133,8 @@
     "objectID": "notebooks.clojure.html#locals-closures",
     "href": "notebooks.clojure.html#locals-closures",
     "title": "3  Clojure",
-    "section": "3.6 Locals & closures",
-    "text": "3.6 Locals & closures\n\n3.6.1 let\n\n\n3.6.2 defn\n\n\n3.6.3 Closures",
+    "section": "3.7 Locals & closures",
+    "text": "3.7 Locals & closures\n\n3.7.1 let\n\n\n3.7.2 defn\n\n\n3.7.3 Closures",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
     ]
@@ -133,8 +143,8 @@
     "objectID": "notebooks.clojure.html#java-interoperability",
     "href": "notebooks.clojure.html#java-interoperability",
     "title": "3  Clojure",
-    "section": "3.7 Java Interoperability",
-    "text": "3.7 Java Interoperability",
+    "section": "3.8 Java Interoperability",
+    "text": "3.8 Java Interoperability",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
     ]
@@ -143,8 +153,8 @@
     "objectID": "notebooks.clojure.html#sequential-collections",
     "href": "notebooks.clojure.html#sequential-collections",
     "title": "3  Clojure",
-    "section": "3.8 Sequential collections",
-    "text": "3.8 Sequential collections\n\n3.8.1 Vectors\n\n\n3.8.2 Lists",
+    "section": "3.9 Sequential collections",
+    "text": "3.9 Sequential collections\n\n3.9.1 Vectors\n\n\n3.9.2 Lists",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
     ]
@@ -153,8 +163,8 @@
     "objectID": "notebooks.clojure.html#hashed-collections",
     "href": "notebooks.clojure.html#hashed-collections",
     "title": "3  Clojure",
-    "section": "3.9 Hashed collections",
-    "text": "3.9 Hashed collections\n\n3.9.1 Sets\n\n\n3.9.2 Maps\n\n\n3.9.3 Representing domain data",
+    "section": "3.10 Hashed collections",
+    "text": "3.10 Hashed collections\n\n3.10.1 Sets\n\n\n3.10.2 Maps\n\n\n3.10.3 Representing domain data",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
     ]
@@ -163,8 +173,8 @@
     "objectID": "notebooks.clojure.html#flow-control",
     "href": "notebooks.clojure.html#flow-control",
     "title": "3  Clojure",
-    "section": "3.10 Flow control",
-    "text": "3.10 Flow control\n\n3.10.1 Statements vs expressions\n\n\n3.10.2 Flow control expressions",
+    "section": "3.11 Flow control",
+    "text": "3.11 Flow control\n\n3.11.1 Statements vs expressions\n\n\n3.11.2 Flow control expressions",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
     ]
@@ -173,8 +183,8 @@
     "objectID": "notebooks.clojure.html#recursion",
     "href": "notebooks.clojure.html#recursion",
     "title": "3  Clojure",
-    "section": "3.11 Recursion",
-    "text": "3.11 Recursion",
+    "section": "3.12 Recursion",
+    "text": "3.12 Recursion",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
     ]
@@ -183,8 +193,8 @@
     "objectID": "notebooks.clojure.html#exceptions",
     "href": "notebooks.clojure.html#exceptions",
     "title": "3  Clojure",
-    "section": "3.12 Exceptions",
-    "text": "3.12 Exceptions",
+    "section": "3.13 Exceptions",
+    "text": "3.13 Exceptions",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
     ]
@@ -193,8 +203,8 @@
     "objectID": "notebooks.clojure.html#namespaces",
     "href": "notebooks.clojure.html#namespaces",
     "title": "3  Clojure",
-    "section": "3.13 Namespaces",
-    "text": "3.13 Namespaces\n\n3.13.1 Declaring namespaces\n\n\n3.13.2 Java classes and imports\n\nsource: src/notebooks/clojure.clj",
+    "section": "3.14 Namespaces",
+    "text": "3.14 Namespaces\n\n3.14.1 Declaring namespaces\n\n\n3.14.2 Java classes and imports\n\nsource: src/notebooks/clojure.clj",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Clojure</span>"
     ]
